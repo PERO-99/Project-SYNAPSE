@@ -57,6 +57,16 @@ Direct lines for partnerships, technical APIs, and accessibility programs, confi
    ```
 4. Open `http://localhost:8080` in your web browser.
 
+## 🧪 Testing
+This project includes a comprehensive automated test suite.
+To run the tests:
+1. Ensure dependencies are installed (`npm install`).
+2. Run the test script:
+   ```bash
+   npm test
+   ```
+This will validate internal links, HTML structure, and core frontend JavaScript logic in a jsdom environment.
+
 ### Deploy to Vercel
 This project is configured out-of-the-box for **Vercel** deployment.
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FPERO-99%2FProject-SYNAPSE)

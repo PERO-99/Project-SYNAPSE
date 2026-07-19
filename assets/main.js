@@ -244,6 +244,24 @@ document.addEventListener('DOMContentLoaded', () => {
       const formData = new FormData(contactForm);
       const data = Object.fromEntries(formData.entries());
 
+      // Validation & Sanitization
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const cleanEmail = typeof data.email === 'string' ? data.email.trim() : '';
+      const cleanMessage = typeof data.message === 'string' ? data.message.trim().replace(/[<>]/g, '') : '';
+      const cleanName = typeof data.name === 'string' ? data.name.trim().replace(/[<>]/g, '') : '';
+      
+      if (!cleanName || !cleanMessage || !emailRegex.test(cleanEmail) || cleanMessage.length > 2000) {
+        submitError.textContent = "Please provide a valid name, email, and message.";
+        submitError.style.display = 'block';
+        btn.disabled = false;
+        btn.textContent = 'Request Callback';
+        return;
+      }
+
+      data.email = cleanEmail;
+      data.message = cleanMessage;
+      data.name = cleanName;
+
       try {
         const response = await fetch('/api/contact', {
           method: 'POST',

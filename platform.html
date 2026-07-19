@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://flagcdn.com; connect-src 'self'">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Platform — SYNAPSE Stadium Intelligence Mesh</title>
 <meta name="description" content="How SYNAPSE works: a federated multi-agent GenAI mesh with on-device edge intelligence that keeps functioning through stadium network collapse.">
@@ -47,7 +48,7 @@
   <div class="wrap hero-content">
     <div class="eyebrow">The architecture</div>
     <h1>Eight agents.<br>One Conductor.<br>Zero blackout.</h1>
-    <p class="lede">SYNAPSE is built in three layers: specialized reasoning agents, a Conductor that orchestrates and explains them, and an edge mesh that keeps the whole system alive when the stadium network can't keep up.</p>
+    <p class="lede">SYNAPSE is a Generative AI solution specifically targeting FIFA World Cup 2026 stadium operations, enhancing the tournament experience for fans, organizers, volunteers, and venue staff. It is built in three layers: specialized reasoning agents, a Conductor that orchestrates and explains them, and an edge mesh that keeps the whole system alive when the stadium network can't keep up.</p>
   </div>
 </header>
 
@@ -198,54 +199,54 @@
 
     <div class="tabs" data-tabs="#agent-panels">
       <button class="tab-btn active">Navigation</button>
-      <button class="tab-btn">Crowd Dynamics</button>
+      <button class="tab-btn">Crowd Management</button>
       <button class="tab-btn">Accessibility</button>
-      <button class="tab-btn">Transit</button>
+      <button class="tab-btn">Transportation</button>
       <button class="tab-btn">Sustainability</button>
-      <button class="tab-btn">Multilingual</button>
-      <button class="tab-btn">Operations</button>
-      <button class="tab-btn">Decision Support</button>
+      <button class="tab-btn">Multilingual Assistance</button>
+      <button class="tab-btn">Operational Intelligence</button>
+      <button class="tab-btn">Real-time Decision Support</button>
     </div>
 
     <div id="agent-panels" class="glass card">
       <div class="tab-panel active">
         <h3>Navigation Agent</h3>
-        <p style="margin-top:14px;">Generates a personal route to seat, gate, nearest accessible restroom or shortest concession line, continuously re-planned against live crowd data. Runs a distilled model locally, so a fan's phone can keep navigating the concourse even with no bars.</p>
+        <p style="margin-top:14px;"><strong>Generative AI for pathfinding.</strong> Generates a personal route to seat, gate, nearest accessible restroom or shortest concession line, continuously re-planned against live crowd data. Runs a distilled model locally, so a fan's phone can keep navigating the concourse even with no bars.</p>
         <p style="margin-top:14px;"><strong style="color:var(--ink);">Instead of:</strong> a static venue map or a digital-twin view that only organizers can see.</p>
       </div>
       <div class="tab-panel">
-        <h3>Crowd Dynamics Agent</h3>
-        <p style="margin-top:14px;">Forecasts density per gate and concourse segment 8–15 minutes ahead using anonymized turnstile, Wi-Fi-association-count and transit-arrival signals — never facial recognition or individual tracking — and flags a bottleneck before it's visible on any camera.</p>
+        <h3>Crowd Management Agent</h3>
+        <p style="margin-top:14px;"><strong>Generative AI for density prediction.</strong> Forecasts density per gate and concourse segment 8–15 minutes ahead using anonymized turnstile, Wi-Fi-association-count and transit-arrival signals — never facial recognition or individual tracking — and flags a bottleneck before it's visible on any camera.</p>
         <p style="margin-top:14px;"><strong style="color:var(--ink);">Instead of:</strong> a heat-map dashboard that shows a problem only after it has already formed.</p>
       </div>
       <div class="tab-panel">
         <h3>Accessibility Agent</h3>
-        <p style="margin-top:14px;">Builds an opt-in "Fan Twin" profile capturing mobility, sensory, hearing, vision and cognitive needs, then personalizes routing, seating suggestions, and communications — sensory-friendly paths away from pyrotechnics and drum lines, visual strobe alerts for Deaf fans instead of audio-only announcements, and audio-haptic cues for blind fans.</p>
+        <p style="margin-top:14px;"><strong>Generative AI for inclusive routing.</strong> Builds an opt-in "Fan Twin" profile capturing mobility, sensory, hearing, vision and cognitive needs, then personalizes routing, seating suggestions, and communications — sensory-friendly paths away from pyrotechnics and drum lines, visual strobe alerts for Deaf fans instead of audio-only announcements, and audio-haptic cues for blind fans.</p>
         <p style="margin-top:14px;"><strong style="color:var(--ink);">Instead of:</strong> one reserved gate and a wheelchair icon on a map.</p>
       </div>
       <div class="tab-panel">
-        <h3>Transit &amp; Transport Agent</h3>
-        <p style="margin-top:14px;">Combines metro schedules, rideshare surge data, shuttle capacity and parking-lot fill rate into a single personalized "leave by" recommendation, adjusted for a fan's specific gate and mobility needs — and re-optimizes automatically for the post-match dispersal surge.</p>
+        <h3>Transportation Agent</h3>
+        <p style="margin-top:14px;"><strong>Generative AI for transit coordination.</strong> Combines metro schedules, rideshare surge data, shuttle capacity and parking-lot fill rate into a single personalized "leave by" recommendation, adjusted for a fan's specific gate and mobility needs — and re-optimizes automatically for the post-match dispersal surge.</p>
         <p style="margin-top:14px;"><strong style="color:var(--ink);">Instead of:</strong> a generic transit-app link with no stadium-specific context.</p>
       </div>
       <div class="tab-panel">
         <h3>Sustainability Agent</h3>
-        <p style="margin-top:14px;">Calculates each fan's actual carbon footprint for their trip — mode of transport, distance, group size — and converts it into a live incentive: transit credit, an expedited security lane, or a merchandise discount, turning sustainability into something a fan experiences, not a stat organizers report later.</p>
+        <p style="margin-top:14px;"><strong>Generative AI for energy/waste reduction.</strong> Calculates each fan's actual carbon footprint for their trip — mode of transport, distance, group size — and converts it into a live incentive: transit credit, an expedited security lane, or a merchandise discount, turning sustainability into something a fan experiences, not a stat organizers report later.</p>
         <p style="margin-top:14px;"><strong style="color:var(--ink);">Instead of:</strong> an end-of-tournament sustainability report nobody reads until it's over.</p>
       </div>
       <div class="tab-panel">
-        <h3>Multilingual Dispatch Agent</h3>
-        <p style="margin-top:14px;">Provides live two-way voice translation across 40+ languages for fans and staff, auto-translates signage and push alerts based on real-time arrival-language mix at each gate, and gives volunteers an instant translated micro-script for unfamiliar situations — with sign-language avatar support for core safety messages.</p>
+        <h3>Multilingual Assistance Agent</h3>
+        <p style="margin-top:14px;"><strong>Generative AI for instant translation.</strong> Provides live two-way voice translation across 40+ languages for fans and staff, auto-translates signage and push alerts based on real-time arrival-language mix at each gate, and gives volunteers an instant translated micro-script for unfamiliar situations — with sign-language avatar support for core safety messages.</p>
         <p style="margin-top:14px;"><strong style="color:var(--ink);">Instead of:</strong> "deploying volunteers who happen to speak Spanish" as the entire multilingual strategy.</p>
       </div>
       <div class="tab-panel">
         <h3>Operational Intelligence Agent</h3>
-        <p style="margin-top:14px;">Rolls activity from all 16 stadiums into one live organizer briefing, and — critically — attaches a plain-language "why" to every recommendation so an audit or a post-incident review can see the reasoning, not just the output.</p>
+        <p style="margin-top:14px;"><strong>Generative AI for staff dispatch.</strong> Rolls activity from all 16 stadiums into one live organizer briefing, and — critically — attaches a plain-language "why" to every recommendation so an audit or a post-incident review can see the reasoning, not just the output.</p>
         <p style="margin-top:14px;"><strong style="color:var(--ink);">Instead of:</strong> a black-box dashboard that shows a recommendation with no accountable reasoning behind it.</p>
       </div>
       <div class="tab-panel">
-        <h3>Decision Support &amp; Emergency Triage Agent</h3>
-        <p style="margin-top:14px;">Fuses camera feeds, radio chatter and volunteer voice reports into a drafted incident brief — suggested resource, suggested route for medical teams, translated summary — for a human dispatcher to confirm or override in seconds. It never dispatches autonomously; it removes the minutes lost assembling the picture by hand.</p>
+        <h3>Real-time Decision Support Agent</h3>
+        <p style="margin-top:14px;"><strong>Generative AI for emergency triage.</strong> Fuses camera feeds, radio chatter and volunteer voice reports into a drafted incident brief — suggested resource, suggested route for medical teams, translated summary — for a human dispatcher to confirm or override in seconds. It never dispatches autonomously; it removes the minutes lost assembling the picture by hand.</p>
         <p style="margin-top:14px;"><strong style="color:var(--ink);">Instead of:</strong> a robotic security unit or a system that acts without a human decision in the loop.</p>
       </div>
     </div>
