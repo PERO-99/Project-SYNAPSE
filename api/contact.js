@@ -41,15 +41,11 @@ ${message || 'N/A'}
     };
 
     try {
-        // Only attempt to send if credentials exist
         if (process.env.EMAIL_USER && process.env.EMAIL_PASS) {
             await transporter.sendMail(mailOptions);
         } else {
             console.warn("Vercel Serverless: Missing EMAIL_USER / EMAIL_PASS environment variables. Email notification skipped.");
         }
-        
-        // Note: Writing to a local contacts.json won't persist on Vercel Serverless because the filesystem is read-only.
-        // To persist contacts in Vercel, you should integrate Vercel Postgres, Vercel KV, or an external database.
         
         res.status(200).json({ success: true, message: 'Request received successfully.' });
     } catch (err) {
