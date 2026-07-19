@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Platform — SYNAPSE Stadium Intelligence Mesh</title>
+<meta name="description" content="How SYNAPSE works: a federated multi-agent GenAI mesh with on-device edge intelligence that keeps functioning through stadium network collapse.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2246%22 fill=%22%2305100C%22/><circle cx=%2250%22 cy=%2250%22 r=%228%22 fill=%22%233FE8B8%22/></svg>">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-glass">
+      <a href="index.html" class="brand">
+        <svg class="brand-mark" viewBox="0 0 100 100" fill="none"><circle cx="50" cy="50" r="7" fill="#FFB800"/><circle cx="22" cy="30" r="5" fill="#FFB800" opacity="0.7"/><circle cx="80" cy="25" r="5" fill="#FFB800" opacity="0.7"/><circle cx="78" cy="78" r="5" fill="#FFB800" opacity="0.7"/><circle cx="20" cy="75" r="5" fill="#FFB800" opacity="0.7"/><path d="M50 50L22 30M50 50L80 25M50 50L78 78M50 50L20 75" stroke="#FFB800" stroke-width="2.5" opacity="0.6"/></svg>
+        SYNAPSE
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="platform.html" class="active">Platform</a>
+        <a href="journeys.html">Journeys</a>
+        <a href="impact.html">Why Us</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="nav-cta">
+        <a href="contact.html" class="btn btn-primary">Request Deployment</a>
+        <button class="nav-toggle" aria-label="Menu"><span></span></button>
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <a href="index.html">Home</a><a href="platform.html">Platform</a><a href="journeys.html">Journeys</a><a href="impact.html">Why Us</a><a href="contact.html">Contact</a>
+</div>
+
+<header class="hero" style="min-height:70vh; padding-top:180px;">
+  <!-- Video-like cinematic loop: architecture / tech theme -->
+  <div class="hero-video">
+    <div class="video-slide" style="background-image:url('assets/network_mesh.png')"></div>
+    <div class="video-slide" style="background-image:url('assets/command_center.png')"></div>
+    <div class="video-slide" style="background-image:url('assets/hero_stadium.png')"></div>
+    <div class="light-sweep"></div>
+  </div>
+  <canvas id="mesh-canvas"></canvas>
+  <div class="wrap hero-content">
+    <div class="eyebrow">The architecture</div>
+    <h1>Eight agents.<br>One Conductor.<br>Zero blackout.</h1>
+    <p class="lede">SYNAPSE is built in three layers: specialized reasoning agents, a Conductor that orchestrates and explains them, and an edge mesh that keeps the whole system alive when the stadium network can't keep up.</p>
+  </div>
+</header>
+
+<!-- Scroll Scene — Architecture Context -->
+<div class="scroll-scene-full" style="height:360px;">
+  <div class="scene-img" style="background-image:url('assets/network_mesh.png')"></div>
+  <div class="scene-label reveal">
+    <div class="eyebrow" style="justify-content:center;">AI mesh architecture</div>
+    <p style="color:var(--ink-dim); font-size:1.05rem; max-width:500px; margin:0 auto; text-align:center;">Eight specialized agents, one Conductor, and an edge mesh that survives every scenario.</p>
+  </div>
+</div>
+
+
+<section class="pad">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow gold">System overview</div>
+      <h2>How a single question becomes eight coordinated actions.</h2>
+    </div>
+    <div class="glass card reveal" style="padding:48px 40px;">
+      <svg viewBox="0 0 1100 480" style="width:100%; height:auto;" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#FFB800" opacity="0.6"/></marker>
+        </defs>
+        
+        <rect x="20" y="20" width="200" height="60" rx="16" fill="rgba(245,185,66,0.08)" stroke="#F5B942" stroke-width="1.2"/>
+        <text x="120" y="45" fill="#EAF5EF" font-family="Space Grotesk" font-size="15" text-anchor="middle" font-weight="600">Fan / Volunteer</text>
+        <text x="120" y="64" fill="#B8CCC3" font-family="JetBrains Mono" font-size="11" text-anchor="middle">App · Kiosk · Voice</text>
+
+        
+        <line x1="120" y1="80" x2="120" y2="130" stroke="#FFB800" stroke-width="1.4" marker-end="url(#arrow)" opacity="0.6"/>
+
+        
+        <rect x="20" y="130" width="200" height="70" rx="16" fill="rgba(63,232,184,0.10)" stroke="#FFB800" stroke-width="1.2"/>
+        <text x="120" y="158" fill="#EAF5EF" font-family="Space Grotesk" font-size="15" text-anchor="middle" font-weight="600">The Conductor</text>
+        <text x="120" y="177" fill="#B8CCC3" font-family="JetBrains Mono" font-size="10.5" text-anchor="middle">Routes · Arbitrates · Explains</text>
+        <text x="120" y="192" fill="#7E9A8E" font-family="JetBrains Mono" font-size="9.5" text-anchor="middle">"Why" trace generated every time</text>
+
+        
+        <line x1="220" y1="150" x2="330" y2="70" stroke="#FFB800" stroke-width="1" opacity="0.45"/>
+        <line x1="220" y1="165" x2="330" y2="150" stroke="#FFB800" stroke-width="1" opacity="0.45"/>
+        <line x1="220" y1="180" x2="330" y2="230" stroke="#FFB800" stroke-width="1" opacity="0.45"/>
+        <line x1="220" y1="190" x2="330" y2="310" stroke="#FFB800" stroke-width="1" opacity="0.45"/>
+        <line x1="220" y1="195" x2="330" y2="390" stroke="#FFB800" stroke-width="1" opacity="0.45"/>
+
+        
+        <g font-family="Space Grotesk" font-size="13" font-weight="600" fill="#EAF5EF">
+          <rect x="330" y="40" width="220" height="46" rx="12" fill="rgba(235,255,246,0.06)" stroke="rgba(210,255,238,0.2)"/>
+          <text x="440" y="68" text-anchor="middle">Navigation</text>
+          <rect x="330" y="128" width="220" height="46" rx="12" fill="rgba(235,255,246,0.06)" stroke="rgba(210,255,238,0.2)"/>
+          <text x="440" y="156" text-anchor="middle">Crowd Dynamics</text>
+          <rect x="330" y="208" width="220" height="46" rx="12" fill="rgba(235,255,246,0.06)" stroke="rgba(210,255,238,0.2)"/>
+          <text x="440" y="236" text-anchor="middle">Accessibility</text>
+          <rect x="330" y="288" width="220" height="46" rx="12" fill="rgba(235,255,246,0.06)" stroke="rgba(210,255,238,0.2)"/>
+          <text x="440" y="316" text-anchor="middle">Transit</text>
+          <rect x="330" y="368" width="220" height="46" rx="12" fill="rgba(235,255,246,0.06)" stroke="rgba(210,255,238,0.2)"/>
+          <text x="440" y="396" text-anchor="middle">Sustainability</text>
+        </g>
+
+        <g font-family="Space Grotesk" font-size="13" font-weight="600" fill="#EAF5EF">
+          <rect x="600" y="40" width="230" height="46" rx="12" fill="rgba(235,255,246,0.06)" stroke="rgba(210,255,238,0.2)"/>
+          <text x="715" y="68" text-anchor="middle">Multilingual Dispatch</text>
+          <rect x="600" y="128" width="230" height="46" rx="12" fill="rgba(235,255,246,0.06)" stroke="rgba(210,255,238,0.2)"/>
+          <text x="715" y="156" text-anchor="middle">Operational Intelligence</text>
+          <rect x="600" y="208" width="230" height="46" rx="12" fill="rgba(235,255,246,0.06)" stroke="rgba(210,255,238,0.2)"/>
+          <text x="715" y="236" text-anchor="middle">Decision Support</text>
+        </g>
+        <line x1="550" y1="63" x2="600" y2="63" stroke="#FFB800" stroke-width="1" opacity="0.45"/>
+        <line x1="550" y1="151" x2="600" y2="151" stroke="#FFB800" stroke-width="1" opacity="0.45"/>
+        <line x1="550" y1="231" x2="600" y2="231" stroke="#FFB800" stroke-width="1" opacity="0.45"/>
+
+        
+        <rect x="880" y="128" width="190" height="70" rx="16" fill="rgba(245,185,66,0.10)" stroke="#F5B942" stroke-width="1.2"/>
+        <text x="975" y="156" fill="#EAF5EF" font-family="Space Grotesk" font-size="14" text-anchor="middle" font-weight="600">Edge Mesh</text>
+        <text x="975" y="174" fill="#B8CCC3" font-family="JetBrains Mono" font-size="10" text-anchor="middle">On-device SLMs</text>
+        <text x="975" y="188" fill="#7E9A8E" font-family="JetBrains Mono" font-size="9" text-anchor="middle">Works with zero signal</text>
+        <line x1="830" y1="151" x2="880" y2="163" stroke="#F5B942" stroke-width="1.2" opacity="0.7"/>
+
+        
+        <rect x="20" y="430" width="1060" height="34" rx="12" fill="rgba(156,140,255,0.08)" stroke="#9C8CFF" stroke-width="1"/>
+        <text x="550" y="452" fill="#B8CCC3" font-family="JetBrains Mono" font-size="11" text-anchor="middle">Federated learning across all 16 stadiums · differential privacy · no raw personal data leaves the venue</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+
+<section class="pad" id="edge">
+  <div class="wrap">
+    <div class="grid g2" style="gap:60px; align-items:center;">
+      <div class="reveal">
+        <div class="eyebrow gold">The idea nobody else is shipping</div>
+        <h2>It doesn't call home. It already knows.</h2>
+        <p class="lede" style="margin-top:20px;">A packed World Cup stadium can move more than 50 terabytes of data in a single match, and reconnection storms after big moments can cascade into what network engineers call an "avalanche effect" — a wave of failed retries that keeps the network down even after towers recover. Every cloud-only AI dashboard goes blind at exactly that moment.</p>
+        <p class="lede" style="margin-top:16px;">SYNAPSE runs small, distilled language models directly on stadium Wi-Fi access points and low-power Bluetooth mesh beacons. They hold a locally synced picture of crowd density, gate status and accessibility routing — refreshed constantly while the network is healthy, and still fully functional for wayfinding, translation and volunteer dispatch when it isn't.</p>
+      </div>
+      <div class="glass card reveal">
+        <div class="eyebrow" style="margin-bottom:20px;">How it survives a blackout</div>
+        <div class="journey" style="--dot:0;">
+          <div class="journey-step">
+            <div class="journey-dot mono">1</div>
+            <div class="journey-body"><h4>Cloud-healthy</h4><p>Conductor and all 8 agents reason centrally, learning across all 16 venues in real time.</p></div>
+          </div>
+          <div class="journey-step">
+            <div class="journey-dot mono">2</div>
+            <div class="journey-body"><h4>Signal degrades</h4><p>Edge beacons detect rising latency and pre-emptively pull the freshest routing and translation state before the link drops.</p></div>
+          </div>
+          <div class="journey-step">
+            <div class="journey-dot mono">3</div>
+            <div class="journey-body"><h4>Network down</h4><p>On-device models keep serving wayfinding, accessibility routing and core translations from the last synced state — no spinner, no blank screen.</p></div>
+          </div>
+          <div class="journey-step">
+            <div class="journey-dot mono">4</div>
+            <div class="journey-body"><h4>Reconnect</h4><p>Queued decisions and local learnings reconcile with the Conductor, and lessons from that gate improve every other stadium's model.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- Scroll Scene — Fan journey preview -->
+<div class="scroll-scene-split">
+  <div class="scene-visual reveal-left">
+    <img src="assets/fan_journey.png" alt="Fan using SYNAPSE at stadium">
+  </div>
+  <div class="scene-text reveal-right">
+    <div class="eyebrow gold">Edge in action</div>
+    <h2>Fans stay guided.<br>Network or not.</h2>
+    <p class="lede" style="margin-top:20px;">When the stadium cell towers collapse under kickoff load, fans' phones still navigate the concourse. The SYNAPSE edge mesh pre-loads the last synced routing state — every wayfinding response feels instant even at zero bars.</p>
+    <div style="margin-top:32px;">
+      <a href="journeys.html" class="btn btn-glass">See a fan's full journey →</a>
+    </div>
+  </div>
+</div>
+
+
+<section class="pad" id="agents">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Agent specifications</div>
+      <h2>What each agent actually does differently.</h2>
+    </div>
+
+    <div class="tabs" data-tabs="#agent-panels">
+      <button class="tab-btn active">Navigation</button>
+      <button class="tab-btn">Crowd Dynamics</button>
+      <button class="tab-btn">Accessibility</button>
+      <button class="tab-btn">Transit</button>
+      <button class="tab-btn">Sustainability</button>
+      <button class="tab-btn">Multilingual</button>
+      <button class="tab-btn">Operations</button>
+      <button class="tab-btn">Decision Support</button>
+    </div>
+
+    <div id="agent-panels" class="glass card">
+      <div class="tab-panel active">
+        <h3>Navigation Agent</h3>
+        <p style="margin-top:14px;">Generates a personal route to seat, gate, nearest accessible restroom or shortest concession line, continuously re-planned against live crowd data. Runs a distilled model locally, so a fan's phone can keep navigating the concourse even with no bars.</p>
+        <p style="margin-top:14px;"><strong style="color:var(--ink);">Instead of:</strong> a static venue map or a digital-twin view that only organizers can see.</p>
+      </div>
+      <div class="tab-panel">
+        <h3>Crowd Dynamics Agent</h3>
+        <p style="margin-top:14px;">Forecasts density per gate and concourse segment 8–15 minutes ahead using anonymized turnstile, Wi-Fi-association-count and transit-arrival signals — never facial recognition or individual tracking — and flags a bottleneck before it's visible on any camera.</p>
+        <p style="margin-top:14px;"><strong style="color:var(--ink);">Instead of:</strong> a heat-map dashboard that shows a problem only after it has already formed.</p>
+      </div>
+      <div class="tab-panel">
+        <h3>Accessibility Agent</h3>
+        <p style="margin-top:14px;">Builds an opt-in "Fan Twin" profile capturing mobility, sensory, hearing, vision and cognitive needs, then personalizes routing, seating suggestions, and communications — sensory-friendly paths away from pyrotechnics and drum lines, visual strobe alerts for Deaf fans instead of audio-only announcements, and audio-haptic cues for blind fans.</p>
+        <p style="margin-top:14px;"><strong style="color:var(--ink);">Instead of:</strong> one reserved gate and a wheelchair icon on a map.</p>
+      </div>
+      <div class="tab-panel">
+        <h3>Transit &amp; Transport Agent</h3>
+        <p style="margin-top:14px;">Combines metro schedules, rideshare surge data, shuttle capacity and parking-lot fill rate into a single personalized "leave by" recommendation, adjusted for a fan's specific gate and mobility needs — and re-optimizes automatically for the post-match dispersal surge.</p>
+        <p style="margin-top:14px;"><strong style="color:var(--ink);">Instead of:</strong> a generic transit-app link with no stadium-specific context.</p>
+      </div>
+      <div class="tab-panel">
+        <h3>Sustainability Agent</h3>
+        <p style="margin-top:14px;">Calculates each fan's actual carbon footprint for their trip — mode of transport, distance, group size — and converts it into a live incentive: transit credit, an expedited security lane, or a merchandise discount, turning sustainability into something a fan experiences, not a stat organizers report later.</p>
+        <p style="margin-top:14px;"><strong style="color:var(--ink);">Instead of:</strong> an end-of-tournament sustainability report nobody reads until it's over.</p>
+      </div>
+      <div class="tab-panel">
+        <h3>Multilingual Dispatch Agent</h3>
+        <p style="margin-top:14px;">Provides live two-way voice translation across 40+ languages for fans and staff, auto-translates signage and push alerts based on real-time arrival-language mix at each gate, and gives volunteers an instant translated micro-script for unfamiliar situations — with sign-language avatar support for core safety messages.</p>
+        <p style="margin-top:14px;"><strong style="color:var(--ink);">Instead of:</strong> "deploying volunteers who happen to speak Spanish" as the entire multilingual strategy.</p>
+      </div>
+      <div class="tab-panel">
+        <h3>Operational Intelligence Agent</h3>
+        <p style="margin-top:14px;">Rolls activity from all 16 stadiums into one live organizer briefing, and — critically — attaches a plain-language "why" to every recommendation so an audit or a post-incident review can see the reasoning, not just the output.</p>
+        <p style="margin-top:14px;"><strong style="color:var(--ink);">Instead of:</strong> a black-box dashboard that shows a recommendation with no accountable reasoning behind it.</p>
+      </div>
+      <div class="tab-panel">
+        <h3>Decision Support &amp; Emergency Triage Agent</h3>
+        <p style="margin-top:14px;">Fuses camera feeds, radio chatter and volunteer voice reports into a drafted incident brief — suggested resource, suggested route for medical teams, translated summary — for a human dispatcher to confirm or override in seconds. It never dispatches autonomously; it removes the minutes lost assembling the picture by hand.</p>
+        <p style="margin-top:14px;"><strong style="color:var(--ink);">Instead of:</strong> a robotic security unit or a system that acts without a human decision in the loop.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+
+<section class="pad" id="trust">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow gold">Trust &amp; privacy, by design</div>
+      <h2>The mesh that never watches more than it has to.</h2>
+    </div>
+    <div class="grid g3">
+      <div class="glass card reveal">
+        <h3>No biometric surveillance creep</h3>
+        <p style="margin-top:14px;">Crowd forecasting runs on anonymized counts and flow signals, never facial recognition or individual identity tracking, and accessibility data is opt-in and fan-controlled at all times.</p>
+      </div>
+      <div class="glass card reveal">
+        <h3>Federated, not centralized</h3>
+        <p style="margin-top:14px;">Each stadium's models improve a shared global model through federated learning with differential privacy — patterns travel between venues, raw personal data never does.</p>
+      </div>
+      <div class="glass card reveal">
+        <h3>Explainable by default</h3>
+        <p style="margin-top:14px;">Every organizer-facing recommendation carries a natural-language "why," so decisions can be reviewed, challenged, and audited after the fact — not just trusted blindly.</p>
+      </div>
+      <div class="glass card reveal">
+        <h3>Human-in-the-loop on safety</h3>
+        <p style="margin-top:14px;">Emergency and medical triage is always drafted for a human responder to confirm. The system accelerates judgment; it never replaces it.</p>
+      </div>
+      <div class="glass card reveal">
+        <h3>Ephemeral by default</h3>
+        <p style="margin-top:14px;">Fan Twin profiles and journey data expire automatically after the event window unless a fan explicitly opts to keep them for future matches.</p>
+      </div>
+      <div class="glass card reveal">
+        <h3>Built to outlive the tournament</h3>
+        <p style="margin-top:14px;">The same mesh architecture is designed to hand off to host-city transit authorities and venues after 2026 — see how on the Why SYNAPSE page.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pad" style="padding-top:0;">
+  <div class="wrap">
+    <div class="glass card reveal" style="padding:56px; display:flex; align-items:center; justify-content:space-between; gap:40px; flex-wrap:wrap;">
+      <div style="max-width:560px;">
+        <div class="eyebrow gold">Next</div>
+        <h2 style="font-size:clamp(1.6rem,2.6vw,2.2rem);">See the architecture in motion — through the eyes of a fan, a volunteer, and an organizer.</h2>
+      </div>
+      <a href="journeys.html" class="btn btn-primary">Walk the journeys →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <div class="brand" style="margin-bottom:14px;">
+          <svg class="brand-mark" viewBox="0 0 100 100" fill="none"><circle cx="50" cy="50" r="7" fill="#FFB800"/><circle cx="22" cy="30" r="5" fill="#FFB800" opacity="0.7"/><circle cx="80" cy="25" r="5" fill="#FFB800" opacity="0.7"/><circle cx="78" cy="78" r="5" fill="#FFB800" opacity="0.7"/><circle cx="20" cy="75" r="5" fill="#FFB800" opacity="0.7"/><path d="M50 50L22 30M50 50L80 25M50 50L78 78M50 50L20 75" stroke="#FFB800" stroke-width="2.5" opacity="0.6"/></svg>
+          SYNAPSE
+        </div>
+        <p style="max-width:280px;">A federated GenAI mesh for stadium operations, designed for FIFA World Cup 2026 and built to outlast it.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Platform</h4>
+        <ul><li><a href="platform.html">Architecture</a></li><li><a href="platform.html#agents">The 8 agents</a></li><li><a href="platform.html#edge">Edge &amp; offline mesh</a></li><li><a href="platform.html#trust">Trust &amp; privacy</a></li></ul>
+      </div>
+      <div class="foot-col">
+        <h4>Solution</h4>
+        <ul><li><a href="journeys.html">Fan journey</a></li><li><a href="journeys.html#volunteer">Volunteer journey</a></li><li><a href="journeys.html#organizer">Organizer command center</a></li><li><a href="impact.html">Why SYNAPSE</a></li></ul>
+      </div>
+      <div class="foot-col">
+        <h4>Get started</h4>
+        <ul><li><a href="contact.html">Request a deployment</a></li><li><a href="contact.html">Talk to the team</a></li></ul>
+      </div>
+    </div>
+    <hr class="divider">
+    <div class="foot-bottom" style="margin-top:30px;">
+      <span>© 2026 SYNAPSE. A concept platform designed for FIFA World Cup 2026 stadium operations.</span>
+      <span class="mono">System status — Concept / Design Stage</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>

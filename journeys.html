@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Journeys — SYNAPSE Stadium Intelligence Mesh</title>
+<meta name="description" content="Walk the SYNAPSE experience through the eyes of a fan, a volunteer, an organizer, and an accessibility-first fan.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2246%22 fill=%22%2305100C%22/><circle cx=%2250%22 cy=%2250%22 r=%228%22 fill=%22%233FE8B8%22/></svg>">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-glass">
+      <a href="index.html" class="brand">
+        <svg class="brand-mark" viewBox="0 0 100 100" fill="none"><circle cx="50" cy="50" r="7" fill="#FFB800"/><circle cx="22" cy="30" r="5" fill="#FFB800" opacity="0.7"/><circle cx="80" cy="25" r="5" fill="#FFB800" opacity="0.7"/><circle cx="78" cy="78" r="5" fill="#FFB800" opacity="0.7"/><circle cx="20" cy="75" r="5" fill="#FFB800" opacity="0.7"/><path d="M50 50L22 30M50 50L80 25M50 50L78 78M50 50L20 75" stroke="#FFB800" stroke-width="2.5" opacity="0.6"/></svg>
+        SYNAPSE
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="platform.html">Platform</a>
+        <a href="journeys.html" class="active">Journeys</a>
+        <a href="impact.html">Why Us</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="nav-cta">
+        <a href="contact.html" class="btn btn-primary">Request Deployment</a>
+        <button class="nav-toggle" aria-label="Menu"><span></span></button>
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <a href="index.html">Home</a><a href="platform.html">Platform</a><a href="journeys.html">Journeys</a><a href="impact.html">Why Us</a><a href="contact.html">Contact</a>
+</div>
+
+<header class="hero" style="min-height:60vh; padding-top:180px;">
+  <div class="hero-video">
+    <div class="video-slide" style="background-image:url('assets/fan_journey.png')"></div>
+    <div class="video-slide" style="background-image:url('assets/crowd_safety.png')"></div>
+    <div class="video-slide" style="background-image:url('assets/accessibility.png')"></div>
+    <div class="light-sweep"></div>
+  </div>
+  <canvas id="mesh-canvas"></canvas>
+  <div class="wrap hero-content">
+    <div class="eyebrow">Four people, one matchday</div>
+    <h1>Same stadium.<br>Four completely different journeys.</h1>
+    <p class="lede">SYNAPSE doesn't hand everyone the same app screen. It reasons about who's asking, what they need, and what the venue looks like right now.</p>
+  </div>
+</header>
+
+<!-- Scroll Scene — Fan crowd context -->
+<div class="scroll-scene-full" style="height:340px;">
+  <div class="scene-img" style="background-image:url('assets/crowd_safety.png')"></div>
+  <div class="scene-label reveal">
+    <div class="eyebrow" style="justify-content:center;">Real-time crowd intelligence</div>
+    <p style="color:var(--ink-dim); font-size:1.05rem; max-width:520px; margin:0 auto; text-align:center;">Every journey is shaped by what's actually happening in the venue — crowd density, gate status, language mix, and accessibility needs — right now.</p>
+  </div>
+</div>
+
+
+<section class="pad" id="fan">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Persona 01 · The traveling fan</div>
+      <h2>Amara, flying in from Lagos for her first World Cup match.</h2>
+      <p class="lede">Her journey starts the moment she books a hotel — not when she reaches the turnstile.</p>
+    </div>
+    <div class="glass card reveal">
+      <div class="journey">
+        <div class="journey-step">
+          <div class="journey-dot mono">AM</div>
+          <div class="journey-body">
+            <span class="journey-time">Day before · Hotel</span>
+            <h4>Fan Twin sets the plan</h4>
+            <p>Amara opts in once. SYNAPSE learns her language (English + Yoruba), that she's traveling with a stroller, and her ticketed gate — then quietly builds tomorrow's plan.</p>
+          </div>
+        </div>
+        <div class="journey-step">
+          <div class="journey-dot mono">06:40</div>
+          <div class="journey-body">
+            <span class="journey-time">Morning · Transit</span>
+            <h4>Transit Agent recommends a departure window</h4>
+            <p>It blends metro crowding forecasts and stroller-friendly routing to suggest leaving 20 minutes earlier than the app's default estimate — with a reason attached, not just a time.</p>
+          </div>
+        </div>
+        <div class="journey-step">
+          <div class="journey-dot mono">14:10</div>
+          <div class="journey-body">
+            <span class="journey-time">Arrival · Precinct</span>
+            <h4>Navigation Agent adapts in real time</h4>
+            <p>Her preferred gate shows rising density. Before she notices a queue, her app quietly re-routes her three minutes earlier through a shorter, stroller-accessible gate.</p>
+          </div>
+        </div>
+        <div class="journey-step">
+          <div class="journey-dot mono">14:55</div>
+          <div class="journey-body">
+            <span class="journey-time">Concourse</span>
+            <h4>Multilingual Dispatch steps in</h4>
+            <p>She asks a volunteer a question in Yoruba through the app's live translator; the volunteer replies through the same channel without needing to find a Yoruba-speaking colleague.</p>
+          </div>
+        </div>
+        <div class="journey-step">
+          <div class="journey-dot mono">22:30</div>
+          <div class="journey-body">
+            <span class="journey-time">Full time · Dispersal</span>
+            <h4>Post-match reverse-funnel routing</h4>
+            <p>Instead of every fan hitting the same exit, staggered gate-opening and personalized transit timing spread the crowd across three exits automatically, cutting her wait at the metro platform.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+
+<section class="pad" id="accessibility">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow gold">Persona 02 · Accessibility-first</div>
+      <h2>Marcus is Deaf, sensory-sensitive, and done with "one accommodation fits all."</h2>
+      <p class="lede">The Accessibility Agent doesn't add one rule to the crowd model — it builds a genuinely different journey.</p>
+    </div>
+    <div class="grid g3">
+      <div class="glass card reveal">
+        <h3>Sensory-aware routing</h3>
+        <p style="margin-top:14px;">His route avoids the pyrotechnics tunnel and drumline gathering point entirely, and flags a quiet room near his section if the concourse noise crosses his comfort threshold.</p>
+      </div>
+      <div class="glass card reveal">
+        <h3>Visual-first safety alerts</h3>
+        <p style="margin-top:14px;">Every audio-only stadium announcement — weather delay, evacuation guidance, gate changes — is mirrored instantly as a push alert and on-screen sign-language avatar, not an afterthought caption.</p>
+      </div>
+      <div class="glass card reveal">
+        <h3>Volunteer briefing, translated</h3>
+        <p style="margin-top:14px;">The nearest volunteer's earpiece gets a one-line briefing — "fan nearby is Deaf, prefers text communication" — before Marcus even has to explain himself.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- Scroll Scene — Accessibility -->
+<div class="scroll-scene-split reverse" style="direction:rtl;">
+  <div class="scene-visual reveal-right" style="direction:ltr;">
+    <img src="assets/accessibility.png" alt="Inclusive fan experience at World Cup">
+  </div>
+  <div class="scene-text reveal-left" style="direction:ltr;">
+    <div class="eyebrow gold">Accessibility first</div>
+    <h2>A journey built for Marcus.<br>Not for "everyone."</h2>
+    <p class="lede" style="margin-top:20px;">Sensory-friendly paths away from pyrotechnics, visual strobe alerts instead of audio-only announcements, and volunteer briefings before Marcus even has to explain himself. SYNAPSE builds a genuinely different journey, not an afterthought.</p>
+  </div>
+</div>
+
+
+<section class="pad" id="volunteer">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Persona 03 · The volunteer</div>
+      <h2>Diego, a first-time World Cup volunteer at Gate 7.</h2>
+      <p class="lede">SYNAPSE treats the volunteer workforce like a live, responsive team — not a fixed roster.</p>
+    </div>
+    <div class="glass card reveal">
+      <div class="journey">
+        <div class="journey-step">
+          <div class="journey-dot mono">1</div>
+          <div class="journey-body"><h4>Swarm dispatch</h4><p>When Gate 4 spikes, the Operations Agent doesn't wait for a supervisor's radio call — it identifies Diego as the nearest available volunteer and sends a task with context, the way a dispatch app would for a driver.</p></div>
+        </div>
+        <div class="journey-step">
+          <div class="journey-dot mono">2</div>
+          <div class="journey-body"><h4>Just-in-time micro-training</h4><p>Diego has never handled a lost-child report. He gets a 30-second, translated walkthrough generated on the spot — not a 40-page manual he read three weeks ago.</p></div>
+        </div>
+        <div class="journey-step">
+          <div class="journey-dot mono">3</div>
+          <div class="journey-body"><h4>Language bridge</h4><p>A Portuguese-speaking fan approaches him with an urgent question. His earpiece translates in both directions in real time — he doesn't need to find a Portuguese-speaking colleague.</p></div>
+        </div>
+        <div class="journey-step">
+          <div class="journey-dot mono">4</div>
+          <div class="journey-body"><h4>Voice-logged incident report</h4><p>He reports a spill in the concourse by speaking naturally into his radio. The Decision Support Agent structures it into a ticket and routes cleanup — he never touches a form.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+
+<section class="pad" id="organizer">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow gold">Persona 04 · The organizer</div>
+      <h2>Priya is watching all 16 stadiums from one command center.</h2>
+      <p class="lede">Not sixteen dashboards. One briefing, with the reasoning attached.</p>
+    </div>
+    <div class="grid g2" style="gap:32px;">
+      <div class="glass card reveal">
+        <div class="eyebrow" style="margin-bottom:16px;">08:12 PM briefing</div>
+        <h3>Cross-venue rollup</h3>
+        <p style="margin-top:14px;">"MetLife and SoFi are both tracking green. Estadio Azteca's East concourse is trending toward 85% capacity 12 minutes ahead of the historical pattern for this fixture — recommend opening the overflow gate now rather than reactively."</p>
+      </div>
+      <div class="glass card reveal">
+        <div class="eyebrow" style="margin-bottom:16px;">Why this, not that</div>
+        <h3>Explainability trace</h3>
+        <p style="margin-top:14px;">"Recommendation is based on a 9% faster-than-typical arrival rate from the West metro line, cross-referenced against the last 4 matches with a similar kickoff time and opponent fan base size."</p>
+      </div>
+    </div>
+    <div class="glass card reveal" style="margin-top:24px;">
+      <div class="eyebrow" style="margin-bottom:16px;">Cross-city learning</div>
+      <h3>What Azteca learns tonight, Lumen Field knows tomorrow.</h3>
+      <p style="margin-top:14px;">Because the mesh learns federatively across all 16 venues, a bottleneck pattern discovered in Mexico City improves the crowd-forecasting model used the next night in Seattle — without ever moving raw attendance or personal data between cities.</p>
+    </div>
+  </div>
+</section>
+
+<section class="pad" style="padding-top:20px;">
+  <div class="wrap">
+    <div class="glass card reveal" style="padding:56px; display:flex; align-items:center; justify-content:space-between; gap:40px; flex-wrap:wrap;">
+      <div style="max-width:560px;">
+        <div class="eyebrow gold">Next</div>
+        <h2 style="font-size:clamp(1.6rem,2.6vw,2.2rem);">See exactly how this compares to what's already being built for 2026.</h2>
+      </div>
+      <a href="impact.html" class="btn btn-primary">Compare the approaches →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <div class="brand" style="margin-bottom:14px;">
+          <svg class="brand-mark" viewBox="0 0 100 100" fill="none"><circle cx="50" cy="50" r="7" fill="#FFB800"/><circle cx="22" cy="30" r="5" fill="#FFB800" opacity="0.7"/><circle cx="80" cy="25" r="5" fill="#FFB800" opacity="0.7"/><circle cx="78" cy="78" r="5" fill="#FFB800" opacity="0.7"/><circle cx="20" cy="75" r="5" fill="#FFB800" opacity="0.7"/><path d="M50 50L22 30M50 50L80 25M50 50L78 78M50 50L20 75" stroke="#FFB800" stroke-width="2.5" opacity="0.6"/></svg>
+          SYNAPSE
+        </div>
+        <p style="max-width:280px;">A federated GenAI mesh for stadium operations, designed for FIFA World Cup 2026 and built to outlast it.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Platform</h4>
+        <ul><li><a href="platform.html">Architecture</a></li><li><a href="platform.html#agents">The 8 agents</a></li><li><a href="platform.html#edge">Edge &amp; offline mesh</a></li><li><a href="platform.html#trust">Trust &amp; privacy</a></li></ul>
+      </div>
+      <div class="foot-col">
+        <h4>Solution</h4>
+        <ul><li><a href="journeys.html#fan">Fan journey</a></li><li><a href="journeys.html#volunteer">Volunteer journey</a></li><li><a href="journeys.html#organizer">Organizer command center</a></li><li><a href="impact.html">Why SYNAPSE</a></li></ul>
+      </div>
+      <div class="foot-col">
+        <h4>Get started</h4>
+        <ul><li><a href="contact.html">Request a deployment</a></li><li><a href="contact.html">Talk to the team</a></li></ul>
+      </div>
+    </div>
+    <hr class="divider">
+    <div class="foot-bottom" style="margin-top:30px;">
+      <span>© 2026 SYNAPSE. A concept platform designed for FIFA World Cup 2026 stadium operations.</span>
+      <span class="mono">System status — Concept / Design Stage</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>

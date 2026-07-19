@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why SYNAPSE — Comparison, Sustainability &amp; Legacy</title>
+<meta name="description" content="How SYNAPSE compares to digital-twin dashboards and generic GenAI copilots, its sustainability model, and its life after the tournament ends.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2246%22 fill=%22%2305100C%22/><circle cx=%2250%22 cy=%2250%22 r=%228%22 fill=%22%233FE8B8%22/></svg>">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-glass">
+      <a href="index.html" class="brand">
+        <svg class="brand-mark" viewBox="0 0 100 100" fill="none"><circle cx="50" cy="50" r="7" fill="#FFB800"/><circle cx="22" cy="30" r="5" fill="#FFB800" opacity="0.7"/><circle cx="80" cy="25" r="5" fill="#FFB800" opacity="0.7"/><circle cx="78" cy="78" r="5" fill="#FFB800" opacity="0.7"/><circle cx="20" cy="75" r="5" fill="#FFB800" opacity="0.7"/><path d="M50 50L22 30M50 50L80 25M50 50L78 78M50 50L20 75" stroke="#FFB800" stroke-width="2.5" opacity="0.6"/></svg>
+        SYNAPSE
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="platform.html">Platform</a>
+        <a href="journeys.html">Journeys</a>
+        <a href="impact.html" class="active">Why Us</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="nav-cta">
+        <a href="contact.html" class="btn btn-primary">Request Deployment</a>
+        <button class="nav-toggle" aria-label="Menu"><span></span></button>
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <a href="index.html">Home</a><a href="platform.html">Platform</a><a href="journeys.html">Journeys</a><a href="impact.html">Why Us</a><a href="contact.html">Contact</a>
+</div>
+
+<header class="hero" style="min-height:60vh; padding-top:180px;">
+  <div class="hero-video">
+    <div class="video-slide" style="background-image:url('assets/command_center.png')"></div>
+    <div class="video-slide" style="background-image:url('assets/sustainability.png')"></div>
+    <div class="video-slide" style="background-image:url('assets/hero_stadium.png')"></div>
+    <div class="light-sweep"></div>
+  </div>
+  <canvas id="mesh-canvas"></canvas>
+  <div class="wrap hero-content">
+    <div class="eyebrow gold">The honest comparison</div>
+    <h1>Why organizers would choose SYNAPSE over what's already being pitched.</h1>
+    <p class="lede">Not a takedown of good engineering — Lenovo's digital twins and FIFA's Football AI Pro are real, useful systems. Here's specifically where they stop, and where SYNAPSE keeps going.</p>
+  </div>
+</header>
+
+<!-- Scroll Scene — Command Center -->
+<div class="scroll-scene-full" style="height:360px;">
+  <div class="scene-img" style="background-image:url('assets/command_center.png')"></div>
+  <div class="scene-label reveal">
+    <div class="eyebrow gold" style="justify-content:center;">One briefing, 16 stadiums</div>
+    <p style="color:var(--ink-dim); font-size:1.05rem; max-width:540px; margin:0 auto; text-align:center;">The Operational Intelligence Agent rolls every venue into a single live organizer view — with a plain-language "why" behind every decision.</p>
+  </div>
+</div>
+
+
+<section class="pad">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Side by side</div>
+      <h2>Three categories of matchday AI, one honest scorecard.</h2>
+    </div>
+    <div class="compare-wrap reveal">
+      <table class="compare">
+        <thead>
+          <tr>
+            <th style="min-width:220px;">Capability</th>
+            <th>Digital-twin dashboards</th>
+            <th>Generic GenAI copilot</th>
+            <th style="color:var(--signal);">SYNAPSE</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="row-label">Works when the stadium network collapses</td>
+            <td class="no">No — cloud-dependent</td>
+            <td class="no">No — cloud-dependent</td>
+            <td class="yes">Yes — on-device edge mesh</td>
+          </tr>
+          <tr>
+            <td class="row-label">Specialized reasoning per function</td>
+            <td class="no">Single monitoring model</td>
+            <td class="no">One general-purpose model</td>
+            <td class="yes">8 purpose-built agents</td>
+          </tr>
+          <tr>
+            <td class="row-label">Personalized accessibility journeys</td>
+            <td class="no">Static accommodations</td>
+            <td class="no">Reactive Q&amp;A only</td>
+            <td class="yes">Opt-in Fan Twin per need</td>
+          </tr>
+          <tr>
+            <td class="row-label">Dynamic volunteer / staff dispatch</td>
+            <td class="no">Fixed roster</td>
+            <td class="no">Not addressed</td>
+            <td class="yes">Real-time swarm dispatch</td>
+          </tr>
+          <tr>
+            <td class="row-label">Explainable, auditable decisions</td>
+            <td class="no">Raw metrics only</td>
+            <td class="no">Black-box responses</td>
+            <td class="yes">Plain-language "why" trace</td>
+          </tr>
+          <tr>
+            <td class="row-label">Sustainability as a live incentive</td>
+            <td class="no">Reported after the fact</td>
+            <td class="no">Not addressed</td>
+            <td class="yes">Real-time personalized nudges</td>
+          </tr>
+          <tr>
+            <td class="row-label">Cross-venue federated learning</td>
+            <td class="no">Siloed per venue</td>
+            <td class="no">Not addressed</td>
+            <td class="yes">Shared learning, private data</td>
+          </tr>
+          <tr>
+            <td class="row-label">Life after the tournament</td>
+            <td class="no">Tournament-specific build</td>
+            <td class="no">Tournament-specific build</td>
+            <td class="yes">Designed for city handoff</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:22px; font-size:13.5px; color:var(--faint); max-width:720px;">This reflects our design intent and publicly reported capabilities of existing tournament technology as of mid-2026, not a claim about any specific vendor's future roadmap.</p>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- Scroll Scene — Sustainability -->
+<div class="scroll-scene-split">
+  <div class="scene-visual reveal-left">
+    <img src="assets/sustainability.png" alt="Sustainable transit at World Cup 2026">
+  </div>
+  <div class="scene-text reveal-right">
+    <div class="eyebrow gold">Sustainability as an experience</div>
+    <h2>A carbon score<br>fans actually see.</h2>
+    <p class="lede" style="margin-top:20px;">Lower-impact transit choices become tangible in the moment — priority security lanes, transit credit, merchandise discounts. The Sustainability Agent turns a press-release metric into something a fan experiences at the gate.</p>
+  </div>
+</div>
+
+
+<section class="pad">
+  <div class="wrap">
+    <div class="grid g2" style="gap:60px; align-items:center;">
+      <div class="reveal">
+        <div class="eyebrow gold">Sustainability, lived not reported</div>
+        <h2>A carbon score a fan actually sees — and benefits from.</h2>
+        <p class="lede" style="margin-top:20px;">Sustainability dashboards at mega-events are usually built for a press release. The Sustainability Agent instead runs a live loop: it estimates each fan's trip footprint from real transit and rideshare data, and turns lower-impact choices into something tangible in the moment — not a statistic six months later.</p>
+        <div class="grid g2" style="margin-top:32px; gap:18px;">
+          <div class="glass card" style="padding:22px;">
+            <div class="mono" style="color:var(--signal); font-size:13px;">Metro / shuttle riders</div>
+            <p style="margin-top:8px; font-size:14px;">Priority security lane + digital transit credit</p>
+          </div>
+          <div class="glass card" style="padding:22px;">
+            <div class="mono" style="color:var(--gold); font-size:13px;">Carpool / rideshare pool</div>
+            <p style="margin-top:8px; font-size:14px;">Partial credit + preferred drop-off zone</p>
+          </div>
+        </div>
+      </div>
+      <div class="glass card reveal">
+        <div class="eyebrow" style="margin-bottom:20px;">Design targets, not measured results</div>
+        <div class="grid g2" style="gap:20px;">
+          <div>
+            <div class="num" style="font-family:var(--display); font-size:2.2rem; font-weight:700;" data-count="34" data-suffix="%">0</div>
+            <div class="mono" style="font-size:11.5px; color:var(--muted); text-transform:uppercase;">Target reduction in bottleneck dwell time</div>
+          </div>
+          <div>
+            <div class="num" style="font-family:var(--display); font-size:2.2rem; font-weight:700;" data-count="100" data-suffix="%">0</div>
+            <div class="mono" style="font-size:11.5px; color:var(--muted); text-transform:uppercase;">Core wayfinding uptime, network or not</div>
+          </div>
+          <div>
+            <div class="num" style="font-family:var(--display); font-size:2.2rem; font-weight:700;" data-count="40" data-suffix="+">0</div>
+            <div class="mono" style="font-size:11.5px; color:var(--muted); text-transform:uppercase;">Languages live-translated</div>
+          </div>
+          <div>
+            <div class="num" style="font-family:var(--display); font-size:2.2rem; font-weight:700;" data-count="16" data-suffix="">0</div>
+            <div class="mono" style="font-size:11.5px; color:var(--muted); text-transform:uppercase;">Stadiums learning as one mesh</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+
+<section class="pad">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Legacy by design</div>
+      <h2>The mesh doesn't get switched off on the final whistle.</h2>
+      <p class="lede">Sixteen host cities will have upgraded transit networks, security frameworks, and stadium infrastructure long after the trophy is lifted. SYNAPSE is architected so the same agents and edge mesh can hand off to city transit authorities and venues for concerts, other sports, and future events — the investment outlives the tournament instead of being decommissioned with it.</p>
+    </div>
+    <div class="grid g3">
+      <div class="glass card reveal">
+        <h3>Transit authorities</h3>
+        <p style="margin-top:14px;">The Transit Agent's demand-forecasting model transfers directly to daily commuter routing once the tournament ends.</p>
+      </div>
+      <div class="glass card reveal">
+        <h3>Venue operators</h3>
+        <p style="margin-top:14px;">Crowd dynamics and accessibility routing keep working for concerts, league matches, and civic events year-round.</p>
+      </div>
+      <div class="glass card reveal">
+        <h3>Future mega-events</h3>
+        <p style="margin-top:14px;">The federated learning mesh itself becomes reusable infrastructure — the next Olympics or continental championship starts from a trained baseline, not zero.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pad" style="padding-top:0;">
+  <div class="wrap">
+    <div class="glass card reveal" style="padding:56px; display:flex; align-items:center; justify-content:space-between; gap:40px; flex-wrap:wrap;">
+      <div style="max-width:560px;">
+        <div class="eyebrow gold">Ready when you are</div>
+        <h2 style="font-size:clamp(1.6rem,2.6vw,2.2rem);">Let's talk about deploying SYNAPSE at your venue.</h2>
+      </div>
+      <a href="contact.html" class="btn btn-primary">Request Deployment →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <div class="brand" style="margin-bottom:14px;">
+          <svg class="brand-mark" viewBox="0 0 100 100" fill="none"><circle cx="50" cy="50" r="7" fill="#FFB800"/><circle cx="22" cy="30" r="5" fill="#FFB800" opacity="0.7"/><circle cx="80" cy="25" r="5" fill="#FFB800" opacity="0.7"/><circle cx="78" cy="78" r="5" fill="#FFB800" opacity="0.7"/><circle cx="20" cy="75" r="5" fill="#FFB800" opacity="0.7"/><path d="M50 50L22 30M50 50L80 25M50 50L78 78M50 50L20 75" stroke="#FFB800" stroke-width="2.5" opacity="0.6"/></svg>
+          SYNAPSE
+        </div>
+        <p style="max-width:280px;">A federated GenAI mesh for stadium operations, designed for FIFA World Cup 2026 and built to outlast it.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Platform</h4>
+        <ul><li><a href="platform.html">Architecture</a></li><li><a href="platform.html#agents">The 8 agents</a></li><li><a href="platform.html#edge">Edge &amp; offline mesh</a></li><li><a href="platform.html#trust">Trust &amp; privacy</a></li></ul>
+      </div>
+      <div class="foot-col">
+        <h4>Solution</h4>
+        <ul><li><a href="journeys.html#fan">Fan journey</a></li><li><a href="journeys.html#volunteer">Volunteer journey</a></li><li><a href="journeys.html#organizer">Organizer command center</a></li><li><a href="impact.html">Why SYNAPSE</a></li></ul>
+      </div>
+      <div class="foot-col">
+        <h4>Get started</h4>
+        <ul><li><a href="contact.html">Request a deployment</a></li><li><a href="contact.html">Talk to the team</a></li></ul>
+      </div>
+    </div>
+    <hr class="divider">
+    <div class="foot-bottom" style="margin-top:30px;">
+      <span>© 2026 SYNAPSE. A concept platform designed for FIFA World Cup 2026 stadium operations.</span>
+      <span class="mono">System status — Concept / Design Stage</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>
